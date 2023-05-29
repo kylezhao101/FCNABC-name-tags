@@ -3,19 +3,24 @@
 <head>
     <title>Name Input</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;900&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
-        <h1>Name Input</h1>
+        <h1>FCNABC Nametag Generator</h1>
         <form action="{{ url_for('index') }}" method="post">
             <textarea name="names" placeholder="Enter names (one name per line)" required>{{ names }}</textarea>
-            <button type="submit">Save</button>
+
+            <div class="form-buttons">
+                <button type="submit">Save</button>
+                {% if file_generated %}
+                        <a href="{{ url_for('download') }}" download>Download PDF </a>
+                {% endif %}
+            </div>
         </form>
-        {% if file_generated %}
-        <div>
-            <a href="{{ url_for('download') }}" download>Download Name Tags PDF</a>
-        </div>
-        {% endif %}
     </div>
 </body>
 </html>

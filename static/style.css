@@ -1,42 +1,80 @@
+body {
+  background-color: #e6f4f4;
+  margin: 0;
+  padding: 0;
+}
+
 .container {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
-    text-align: center;
-  }
-  
-  h1 {
-    font-size: 24px;
-    margin-bottom: 20px;
-  }
-  
-  textarea {
-    width: 100%;
-    height: 200px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    resize: vertical;
-  }
-  
-  button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  a {
-    display: inline-block;
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 4px;
-  }
-  
-  a:hover {
-    background-color: #45a049;
-  }
+  max-width: 800px;
+  margin: 0 auto;
+  padding-top: 10vh;
+}
+
+h1 {
+  font-family: 'Lato', sans-serif;
+  font-weight: 900;
+  font-size: 50pt;
+  margin-bottom: 2rem;
+  color: #060e0e;
+}
+
+textarea {
+  font-family: 'Lato', sans-serif;
+  font-size: 15pt;
+  width: 100%;
+  height: 200px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  background-color: #e6f4f4;
+  border-radius: 6px;
+  resize: vertical;
+}
+
+.form-buttons {
+  display: flex;
+  align-items: center;
+  column-gap: 0.5rem;
+  margin-top: 2rem;
+}
+
+button {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  font-size: 15pt;
+  background-color: #cf8c8d;
+  color: #060e0e;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease-in;
+  padding-top: 10pt;
+  padding-bottom: 10pt;
+  padding-right: 20pt;
+  padding-left: 20pt;
+}
+
+button:hover {
+  box-shadow: 0 14px 14px #cf8c8d;
+  transform: translateY(-5px);
+}
+
+a {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  font-size: 15pt;
+  padding-top: 10pt;
+  padding-bottom: 10pt;
+  padding-right: 20pt;
+  padding-left: 20pt;
+  background-color: #ad484a;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  ;
+  transition: all 0.2s ease-in;
+}
+
+a:hover {
+  box-shadow: 0 14px 14px #ad484a;
+  transform: translateY(-5px);
+}
