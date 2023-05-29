@@ -18,6 +18,10 @@ h1 {
   color: #060e0e;
 }
 
+h1 span {
+  color: #ad484a5e;
+}
+
 textarea {
   font-family: 'Lato', sans-serif;
   font-size: 15pt;
@@ -35,6 +39,7 @@ textarea {
   align-items: center;
   column-gap: 0.5rem;
   margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 button {
@@ -58,7 +63,7 @@ button:hover {
   transform: translateY(-5px);
 }
 
-a {
+.download-button {
   font-family: 'Lato', sans-serif;
   font-weight: 400;
   font-size: 15pt;
@@ -74,7 +79,19 @@ a {
   transition: all 0.2s ease-in;
 }
 
-a:hover {
+.download-button:hover {
   box-shadow: 0 14px 14px #ad484a;
   transform: translateY(-5px);
+}
+
+div .in-text-link {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  font-size: 15pt;
+  color: #ad484a;
+  text-decoration: none;
+}
+
+div .in-text-link:hover {
+  text-decoration: underline;
 }

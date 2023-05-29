@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request, send_file
 import subprocess
+from pdf2image import convert_from_path
 
 app = Flask(__name__)
 
@@ -21,7 +22,7 @@ def index():
 def download():
     # Generate the PDF file using your existing script
     subprocess.run(['python', 'pdfScript.py'])
-
+    
     # Move the generated PDF file to a location accessible by the web server
     return send_file('generatedPDF.pdf', as_attachment=True)
 

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Name Input</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
@@ -8,19 +9,25 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;900&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <div class="container">
-        <h1>FCNABC Nametag Generator</h1>
+        <h1><span>FCNABC</span> Nametag Generator</h1>
+
         <form action="{{ url_for('index') }}" method="post">
             <textarea name="names" placeholder="Enter names (one name per line)" required>{{ names }}</textarea>
 
             <div class="form-buttons">
                 <button type="submit">Save</button>
                 {% if file_generated %}
-                        <a href="{{ url_for('download') }}" download>Download PDF </a>
+                <a class="download-button" href="{{ url_for('download') }}" download>Download PDF </a>
                 {% endif %}
+            </div>
+            <div>
+                <a class="in-text-link" href="https://github.com/kylezhao101/FCNABC-name-tags">GitHub Repo</a>
             </div>
         </form>
     </div>
 </body>
+
 </html>
