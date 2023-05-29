@@ -19,19 +19,19 @@ This is a web application that allows users to input names, which are stored in 
 ## Installation
 
 1. Clone the repository:
-
+```
 git clone https://github.com/kylezhao101/FCNABC-name-tags.git
-
+```
 2. Install the required Python packages using pip:
-
+```
 pip install -r requirements.txt
-
+```
 3. Place your existing PDF template file in the project directory with the name `original.pdf`. Make sure it has the appropriate layout for name tags.
 
 4. Run the Flask application:
-
+```
 python app.py
-
+```
 5. Access the application in your web browser at `http://localhost:5000`.
 
 ## Usage
