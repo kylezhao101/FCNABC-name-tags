@@ -1,8 +1,12 @@
 from flask import Flask, render_template, request, send_file
 import subprocess
 from pdf2image import convert_from_path
+import os
 
 app = Flask(__name__)
+
+# Get the current working directory
+base_dir = os.path.dirname(os.path.abspath(__file__))
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
@@ -20,11 +24,14 @@ def index():
 
 @app.route('/download')
 def download():
+    # Construct the file path relative to the project folder
+    script_path = os.path.join(base_dir, 'scripts', 'pdfScript.py')
+    
     # Generate the PDF file using your existing script
-    subprocess.run(['python', 'pdfScript.py'])
+    subprocess.run(['python', script_path])
     
     # Move the generated PDF file to a location accessible by the web server
-    return send_file('generatedPDF.pdf', as_attachment=True)
+    return send_file(os.path.join(base_dir, 'generatedPDF.pdf'), as_attachment=True)
 
 if __name__ == '__main__':
     app.run(debug=True)

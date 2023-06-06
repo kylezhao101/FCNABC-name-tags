@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Name Input</title>
+    <title>Name tag generator</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,7 +15,10 @@
         <h1><span>FCNABC</span> Nametag Generator</h1>
 
         <form action="{{ url_for('index') }}" method="post">
-            <textarea name="names" placeholder="Enter names (one name per line)" required>{{ names }}</textarea>
+            <textarea name="names" rows="8" cols="30" placeholder="Enter names (one name per line)" required>{{ names }}</textarea>
+            {% if names %}
+            <p class="warning">{{ names_warning }}</p>
+            {% endif %}
 
             <div class="form-buttons">
                 <button type="submit">Save</button>

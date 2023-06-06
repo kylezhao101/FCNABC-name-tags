@@ -11,7 +11,7 @@ reportlab.rl_config.warnOnMissingFontGlyphs = 0
 
 # Define parameters
 font_name = 'LEMONMILK'
-font_file = 'LEMONMILK-Light.ttf'
+font_file = 'static/fonts/LEMONMILK-Light.ttf'
 font_size_factor = 35
 x_start = 107
 y_start = 655
@@ -46,7 +46,7 @@ can.save()
 packet.seek(0)
 
 new_pdf = PdfReader(packet)
-existing_pdf = PdfReader(open("original.pdf", "rb"))
+existing_pdf = PdfReader(open("static/original.pdf", "rb"))
 
 output = PdfWriter()
 
