@@ -1,6 +1,5 @@
 from flask import Flask, render_template, request, send_file
 import subprocess
-from pdf2image import convert_from_path
 import os
 
 app = Flask(__name__)
